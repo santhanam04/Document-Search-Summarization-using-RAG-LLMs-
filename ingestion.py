@@ -1,6 +1,6 @@
 import re
 from pathlib import Path
-import PyPDF2
+from pypdf import PdfReader
 
 def clean_text(text: str) -> str:
     text = re.sub(r"\s+", " ", text)
@@ -21,7 +21,7 @@ def load_documents(folder_path: str):
 
         elif file.suffix.lower() == ".pdf":
             with open(file, "rb") as f:
-                reader = PyPDF2.PdfReader(f)
+                reader = PdfReader(f)
                 content = " ".join(page.extract_text() or "" for page in reader.pages)
 
         content = clean_text(content)
@@ -33,3 +33,4 @@ def load_documents(folder_path: str):
             })
 
     return docs
+
