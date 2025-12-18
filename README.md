@@ -7,6 +7,8 @@ The system combines traditional information retrieval techniques, semantic embed
 
 This project was built as part of a GenAI / LLM interview assignment and follows industry-standard design principles.
 
+Demo link https://a5oc84syojzgmnjk2dcyge.streamlit.app/
+
 ✨ Key Features
 
 📥 Document Ingestion – Supports PDF and TXT files
